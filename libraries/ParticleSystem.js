@@ -11,6 +11,10 @@ class ParticleSystem {
         for (let p of this.particles){
             p.applyForce(g);
         }
+    applyForce(force) {
+        for (let p of this.particles){
+            p.applyForce(force);
+    }
 }    
 run() {
         for (let i = this.particles.length-1; i >= 0; i--) {
