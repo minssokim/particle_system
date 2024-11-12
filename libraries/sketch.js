@@ -1,5 +1,8 @@
 let system;
+let systems = [];
+
 let g; //gravity
+let wind;
 
 function setup() {
   createCanvas(720, 400);
@@ -10,9 +13,17 @@ function setup() {
 
 function draw() {
   background(51);
-  system.addParticle();
-  system.applyGravity(g);
-  system.run();
-  system.applyForce(wind);
+
+  for (let s of systems) {
+  s.addParticle();
+  s.applyGravity(g);
+  s.run();
+  s.applyForce(wind);
+  }
 }
 
+function mouseClicked() {
+  let mPos = createVector(mouseX,mouseY);
+  let system = new ParticleSystem();
+  systems.push(system);
+}

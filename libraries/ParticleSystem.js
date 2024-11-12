@@ -8,9 +8,11 @@ class ParticleSystem {
     }
 
     applyGravity(g) {
-        for (let p of this.particles){
-            p.applyForce(g);
-        }
+        //for (let p of this.particles){
+        //    p.applyForce(g);
+       // }
+       this.applyForce(g);
+    }
     applyForce(force) {
         for (let p of this.particles){
             p.applyForce(force);
