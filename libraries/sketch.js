@@ -24,6 +24,6 @@ function draw() {
 
 function mouseClicked() {
   let mPos = createVector(mouseX,mouseY);
-  let system = new ParticleSystem();
+  let system = new ParticleSystem(mPos);
   systems.push(system);
 }
